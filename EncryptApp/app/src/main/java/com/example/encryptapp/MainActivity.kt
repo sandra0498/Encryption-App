@@ -30,13 +30,9 @@ class MainActivity : AppCompatActivity() {
             /*calls the function to cipher and assigns the returning
             string to the text view  */
             resultsTextView.text = cipher(message,rand).toString()
-
-
         }
-
-
-
     }
+
     private fun cipher(text: String, shift: Int) : String{
         var temp: String = ""
 
