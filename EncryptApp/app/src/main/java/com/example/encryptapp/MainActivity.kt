@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
             var message = messageInput.text.toString()
             val rand = (0 until 10).random()
 
+        	// Removes the whitespaces in the word 
             message = message.replace("\\s".toRegex(),"")
             
             /*calls the function to cipher and assigns the returning
