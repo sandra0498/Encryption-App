@@ -24,9 +24,11 @@ class MainActivity : AppCompatActivity() {
 
         enterButton.setOnClickListener {
             //toStrings the actual word input
-            val message = messageInput.text.toString()
+            var message = messageInput.text.toString()
             val rand = (0 until 10).random()
 
+            message = message.replace("\\s".toRegex(),"")
+            
             /*calls the function to cipher and assigns the returning
             string to the text view  */
             resultsTextView.text = cipher(message,rand).toString()
