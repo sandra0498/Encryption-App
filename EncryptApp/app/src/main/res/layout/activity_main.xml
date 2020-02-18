@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#464343"
     tools:context=".MainActivity">
 
     <Button
@@ -22,20 +23,22 @@
         android:id="@+id/messageInput"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:background="#FFFFFF"
         android:ems="10"
         android:hint="Input a word (only alphabetical)"
         android:inputType="textPersonName"
+        android:textColor="#C62828"
+        android:textColorHighlight="#281A33"
+        android:textColorHint="#C62828"
         app:layout_constraintBottom_toTopOf="@+id/enterButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.95" />
+        app:layout_constraintVertical_bias="0.963" />
 
     <View
         android:id="@+id/divider"
@@ -46,7 +49,7 @@
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
         android:layout_marginBottom="32dp"
-        android:background="#283593"
+        android:background="#1565C0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -63,7 +66,7 @@
         android:layout_marginTop="104dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:textColor="#283593"
+        android:textColor="#DF0A0A"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,7 +83,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="41dp"
         android:text="The encrypted message is..."
-        android:textColor="#9C27B0"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#00E2DEDE"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/resultsTextView"
         app:layout_constraintEnd_toEndOf="parent"
