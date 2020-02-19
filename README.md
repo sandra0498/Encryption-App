@@ -7,3 +7,5 @@ This application also uses a random generator to use as a shift in the cipher.
 ***Still, in the process of working on edge cases (exceptions) of the app***
 
 **** This app will not allow the user to insert numbers or punctuation, only ALPHABET **
+
+**UPDATE: Added background color to the app and the text boxes 
