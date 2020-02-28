@@ -29,6 +29,7 @@
         android:background="#FFFFFF"
         android:ems="10"
         android:hint="Input a word (only alphabetical)"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ" 
         android:inputType="textPersonName"
         android:textColor="#C62828"
         android:textColorHighlight="#281A33"

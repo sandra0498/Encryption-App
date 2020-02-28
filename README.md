@@ -10,4 +10,4 @@ This application also uses a random generator to use as a shift in the cipher.
 
 **UPDATE: Added background color to the app and the text boxes 
 
-***will not allow for spaces between words **
+Added a line of code in the xml file that allows spaces in the text input box 
