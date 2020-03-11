@@ -1,5 +1,6 @@
 package com.example.encryptapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -11,9 +12,13 @@ import kotlin.random.nextInt
 
 class MainActivity : AppCompatActivity() {
 
+    companion object{
+        const val EXTRA_TEXT = "com.example.application.example.EXTRA_TEXT"
+    }
     lateinit var enterButton : Button
     lateinit var messageInput : EditText
-    lateinit var  resultsTextView : TextView
+    lateinit var results : String
+
 
 
 
@@ -26,7 +31,6 @@ class MainActivity : AppCompatActivity() {
         // text input for entering the message
         messageInput = findViewById(R.id.messageInput)
         //where the results will be displayed
-        resultsTextView = findViewById(R.id.resultsTextView)
 
         enterButton.setOnClickListener {
             checkInput()
@@ -38,8 +42,8 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        if (message.isEmpty() || !ifAlpha(message)){
-            messageInput.error = "Enter only alphabet!"
+        if (message.isEmpty()){
+            messageInput.error = "Enter a message!"
             return
         }
         val rand = (0 until 10).random()
@@ -49,17 +53,20 @@ class MainActivity : AppCompatActivity() {
 
         /*calls the function to cipher and assigns the returning
         string to the text view  */
-        resultsTextView.text = cipher(message,rand).toString()
+        results = cipher(message,rand)
+        val intent = Intent(this,SecondActivity :: class.java)
+        intent.putExtra(EXTRA_TEXT, results)
+        startActivity(intent)
 
 
     }
 
-    private fun ifAlpha(text: String) : Boolean{
-        if (Pattern.matches(".*[a-zA-z]+.*",text)){
-            return true
-        }
-        return false
-    }
+//    private fun ifAlpha(text: String) : Boolean{
+//        if (Pattern.matches(".*[a-zA-z]+.*",text)){
+//            return true
+//        }
+//        return false
+//    }
 
     private fun cipher(text: String, shift: Int) : String{
         var temp: String = ""
