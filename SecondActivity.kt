@@ -21,5 +21,21 @@ class SecondActivity : AppCompatActivity() {
         displayencrytion = findViewById(R.id.textView2)
         displayencrytion.setText(encryptedResult)
 
+
+        //sets an action bar
+        val actionbar = supportActionBar
+
+        //sets the title of the action bar
+        actionbar!!.title = "Result Window "
+
+        //sets back button
+        actionbar.setDisplayHomeAsUpEnabled(true)
+        actionbar.setDisplayHomeAsUpEnabled(true)
+
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }
