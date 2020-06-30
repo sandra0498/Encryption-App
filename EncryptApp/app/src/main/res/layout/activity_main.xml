@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#464343"
+    android:background="#727272"
     tools:context=".MainActivity">
 
     <Button
@@ -64,31 +64,62 @@
         android:id="@+id/textView3"
         android:layout_width="150dp"
         android:layout_height="25dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginLeft="61dp"
         android:layout_marginEnd="200dp"
         android:layout_marginRight="200dp"
+        android:background="#FFFF"
+        android:shadowColor="#C62828"
         android:text="Vigenère Cipher"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#00C42986"
+        android:textColorHint="@color/colorAccent"
+        android:textColorLink="#6A1B9A"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider"
-        app:layout_constraintVertical_bias="0.091" />
+        app:layout_constraintVertical_bias="0.167" />
 
     <EditText
         android:id="@+id/messageinput2"
-        android:layout_width="217dp"
-        android:layout_height="41dp"
+        android:layout_width="208dp"
+        android:layout_height="35dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginEnd="178dp"
         android:layout_marginRight="178dp"
-        android:layout_marginBottom="244dp"
+        android:layout_marginBottom="172dp"
         android:background="#FFFFFFFF"
         android:ems="10"
-        android:hint="Input a message:"
+        android:hint="    Input a message:"
+        android:inputType="textPersonName"
+        android:textSize="12sp"
+        android:typeface="sans"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/messagekey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="Input the key phrase:"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageinput2"
+        app:layout_constraintVertical_bias="0.267" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
