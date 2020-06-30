@@ -8,3 +8,4 @@ This application also uses a random generator to use as a shift in the cipher.
 
 **** This app will not allow the user to insert numbers or punctuation, only ALPHABET **
 
+working on implementing the Vigenère Cipher onto the app
