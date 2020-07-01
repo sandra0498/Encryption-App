@@ -68,21 +68,17 @@
         android:layout_marginLeft="61dp"
         android:layout_marginEnd="200dp"
         android:layout_marginRight="200dp"
-        android:background="#FFFF"
-        android:shadowColor="#C62828"
         android:text="Vigenère Cipher"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#00C42986"
-        android:textColorHint="@color/colorAccent"
-        android:textColorLink="#6A1B9A"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider"
-        app:layout_constraintVertical_bias="0.167" />
+        app:layout_constraintVertical_bias="0.185" />
 
     <EditText
         android:id="@+id/messageinput2"
