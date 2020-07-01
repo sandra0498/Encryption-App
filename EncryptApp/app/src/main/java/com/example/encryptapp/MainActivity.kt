@@ -91,5 +91,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     // create a new function that performs the vigenere cipher
+    private fun vCipher(text: String, key: String) : String{
+        var temp = " "
+        
+        
+        return temp
+    }
 
 }
