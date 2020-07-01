@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var results : String
     lateinit var messageinput2 : EditText
     lateinit var messagekey : EditText
-
+    lateinit var enterbutton2 : Button
 
 
 
