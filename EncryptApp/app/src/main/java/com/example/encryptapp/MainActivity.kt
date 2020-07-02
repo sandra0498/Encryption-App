@@ -65,12 +65,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-//    private fun ifAlpha(text: String) : Boolean{
-//        if (Pattern.matches(".*[a-zA-z]+.*",text)){
-//            return true
-//        }
-//        return false
-//    }
 
     private fun cipher(text: String, shift: Int) : String{
         var temp: String = ""
