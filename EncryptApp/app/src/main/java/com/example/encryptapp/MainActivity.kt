@@ -93,8 +93,15 @@ class MainActivity : AppCompatActivity() {
     // create a new function that performs the vigenere cipher
     private fun vCipher(text: String, key: String) : String{
         var temp = " "
+
+        var firstarr : CharArray =  text.toCharArray()
+        var secondarr : CharArray = key.toCharArray()
+
+        val msglen = text.length 
+        val keylen = key.length
         
-        
+
+
         return temp
     }
 
