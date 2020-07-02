@@ -96,9 +96,14 @@ class MainActivity : AppCompatActivity() {
 
         var firstarr : CharArray =  text.toCharArray()
         var secondarr : CharArray = key.toCharArray()
+        var i : Int
+        var j : Int
 
-        val msglen = text.length 
+
+        val msglen = text.length
         val keylen = key.length
+
+        var newKey : CharArray = charArrayOf()
         
 
 
