@@ -65,6 +65,12 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+//    private fun ifAlpha(text: String) : Boolean{
+//        if (Pattern.matches(".*[a-zA-z]+.*",text)){
+//            return true
+//        }
+//        return false
+//    }
 
     private fun cipher(text: String, shift: Int) : String{
         var temp: String = ""
@@ -93,12 +99,13 @@ class MainActivity : AppCompatActivity() {
         var i : Int
         var j : Int
 
-
         val msglen = text.length
         val keylen = key.length
 
         var newKey : CharArray = charArrayOf()
+        var encyptmsg : CharArray = charArrayOf()
         
+
 
 
         return temp
