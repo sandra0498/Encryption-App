@@ -104,7 +104,19 @@ class MainActivity : AppCompatActivity() {
 
         var newKey : CharArray = charArrayOf()
         var encyptmsg : CharArray = charArrayOf()
-        
+        i = 0
+        j = 0
+
+        while (i < msglen){
+            ++i
+            ++j
+            if (j == keylen){
+                j = 0
+            }
+            newKey[i] = key[j]
+        }
+//        newKey[i] = '\0'
+
 
 
 
