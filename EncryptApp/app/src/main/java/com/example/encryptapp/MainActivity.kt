@@ -115,7 +115,7 @@ class MainActivity : AppCompatActivity() {
             }
             newKey[i] = key[j]
         }
-//        newKey[i] = '\0'
+        newKey[i] = '\u0000'
 
 
 
