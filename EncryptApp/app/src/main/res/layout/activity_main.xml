@@ -127,10 +127,11 @@
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="65dp"
         android:text="Enter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/messagekey"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/messagekey"
         app:layout_constraintVertical_bias="0.0" />
