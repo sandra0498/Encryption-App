@@ -22,8 +22,10 @@
 
     <EditText
         android:id="@+id/messageInput"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
+        android:layout_width="405dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
@@ -35,8 +37,9 @@
         android:textColor="#C62828"
         android:textColorHighlight="#281A33"
         android:textColorHint="#C62828"
+        android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/enterButton"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/textView4"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
