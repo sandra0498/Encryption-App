@@ -96,16 +96,15 @@ class MainActivity : AppCompatActivity() {
 
         var firstarr : CharArray =  text.toCharArray()
         var secondarr : CharArray = key.toCharArray()
-        var i : Int
-        var j : Int
+        var i : Int = 0
+        var j : Int = 0
 
         val msglen = text.length
         val keylen = key.length
 
         var newKey : CharArray = charArrayOf()
         var encyptmsg : CharArray = charArrayOf()
-        i = 0
-        j = 0
+
 
         while (i < msglen){
             ++i
