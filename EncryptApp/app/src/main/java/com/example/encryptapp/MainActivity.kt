@@ -105,7 +105,7 @@ class MainActivity : AppCompatActivity() {
         var newKey : CharArray = charArrayOf()
         var encyptmsg : CharArray = charArrayOf()
 
-
+        // this loops generates a new key
         while (i < msglen){
             ++i
             ++j
@@ -115,6 +115,8 @@ class MainActivity : AppCompatActivity() {
             newKey[i] = key[j]
         }
         newKey[i] = '\u0000'
+
+        //this loop encrypts the message
 
 
 
