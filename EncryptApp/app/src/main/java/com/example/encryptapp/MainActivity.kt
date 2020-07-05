@@ -103,7 +103,7 @@ class MainActivity : AppCompatActivity() {
         val keylen = key.length
 
         var newKey : CharArray = charArrayOf()
-        var encyptmsg : CharArray = charArrayOf()
+        var encryptmsg : CharArray = charArrayOf()
 
         // this loops generates a new key
         while (i < msglen){
@@ -117,6 +117,15 @@ class MainActivity : AppCompatActivity() {
         newKey[i] = '\u0000'
 
         //this loop encrypts the message
+
+        var k : Int = 0
+        while (k < msglen){
+            ++k
+            encryptmsg[k] = ((firstarr[k] + secondarr[k]) % 26) + 'A'
+
+        }
+
+        encryptmsg[k] = '\u0000'
 
 
 
