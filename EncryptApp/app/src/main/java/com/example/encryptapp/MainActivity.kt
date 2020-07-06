@@ -130,7 +130,7 @@ class MainActivity : AppCompatActivity() {
             //converting the ASCII value to a char
             var newChar : Char = num.toChar()
             encryptmsg[k] = newChar
-            k++
+            ++k
 
         }
 //        for (k in 0..msglen step 1) {
