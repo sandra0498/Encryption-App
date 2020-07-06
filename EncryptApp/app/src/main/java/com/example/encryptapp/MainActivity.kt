@@ -118,22 +118,7 @@ class MainActivity : AppCompatActivity() {
 
         //this loop encrypts the message
         var k : Int = 0
-//        while (k < msglen){
-//            //getting the ASCII value
-//            var first : Int = firstarr[k].toInt()
-//            var second : Int =  secondarr[k].toInt()
-//            var a_val : Int = 'A'.toInt()
-//
-//            //getting the new value
-//            var num : Int  = ((first + second ) % 26) + a_val
-//
-//            //converting the ASCII value to a char
-//            var newChar : Char = num.toChar()
-//            encryptmsg[k] = newChar
-//            ++k
-//
-//        }
-        for (k in 0..msglen step 1) {
+        while (k < msglen){
             //getting the ASCII value
             var first : Int = firstarr[k].toInt()
             var second : Int =  secondarr[k].toInt()
@@ -145,8 +130,23 @@ class MainActivity : AppCompatActivity() {
             //converting the ASCII value to a char
             var newChar : Char = num.toChar()
             encryptmsg[k] = newChar
-            
+            k++
+
         }
+//        for (k in 0..msglen step 1) {
+//            //getting the ASCII value
+//            var first : Int = firstarr[k].toInt()
+//            var second : Int =  secondarr[k].toInt()
+//            var a_val : Int = 'A'.toInt()
+//
+//            //getting the new value
+//            var num : Int  = ((first + second ) % 26) + a_val
+//
+//            //converting the ASCII value to a char
+//            var newChar : Char = num.toChar()
+//            encryptmsg[k] = newChar
+//
+//        }
 
         encryptmsg[k] = '\u0000'
 
