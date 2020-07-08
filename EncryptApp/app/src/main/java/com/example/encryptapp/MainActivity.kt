@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         enterButton.setOnClickListener {
             checkInput()
         }
-        //for the other cipher 
+        //for the other cipher
         enterbutton2 = findViewById(R.id.enterbutton2)
         messageinput2 = findViewById(R.id.messageinput2)
         messagekey = findViewById(R.id.messagekey)
@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun checkInput(){
         var message = messageInput.text.toString()
-        
+
         if (message.isEmpty()){
             messageInput.error = "Enter a message!"
             return
@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this,SecondActivity :: class.java)
         intent.putExtra(EXTRA_TEXT, results)
         startActivity(intent)
-        
+
     }
 
 //    private fun ifAlpha(text: String) : Boolean{
@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
 //    }
 
     private fun cipher(text: String, shift: Int) : String{
-        var temp: String = ""
+        var temp  = ""
 
         val firstcharcode: Int = 'A'.toInt()
         val offset: Int = ('z'- 'A') + 1
