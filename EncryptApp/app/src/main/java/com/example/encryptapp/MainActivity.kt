@@ -39,13 +39,15 @@ class MainActivity : AppCompatActivity() {
         enterButton.setOnClickListener {
             checkInput()
         }
+        //for the other cipher 
+        enterbutton2 = findViewById(R.id.enterbutton2)
+        messageinput2 = findViewById(R.id.messageinput2)
+        messagekey = findViewById(R.id.messagekey)
     }
 
     private fun checkInput(){
         var message = messageInput.text.toString()
-
-
-
+        
         if (message.isEmpty()){
             messageInput.error = "Enter a message!"
             return
@@ -61,8 +63,7 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this,SecondActivity :: class.java)
         intent.putExtra(EXTRA_TEXT, results)
         startActivity(intent)
-
-
+        
     }
 
 //    private fun ifAlpha(text: String) : Boolean{
@@ -115,6 +116,7 @@ class MainActivity : AppCompatActivity() {
         }
         newKey[i] = '\u0000'
 
+
         //this loop encrypts the message
         var k = 0
         while (k < msglen){
@@ -131,7 +133,6 @@ class MainActivity : AppCompatActivity() {
             encryptmsg[k] = newChar
             ++k
         }
-
 
         encryptmsg[k] = '\u0000'
 
