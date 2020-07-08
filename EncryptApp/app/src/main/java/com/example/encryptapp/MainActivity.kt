@@ -43,6 +43,10 @@ class MainActivity : AppCompatActivity() {
         enterbutton2 = findViewById(R.id.enterbutton2)
         messageinput2 = findViewById(R.id.messageinput2)
         messagekey = findViewById(R.id.messagekey)
+        
+        enterbutton2.setOnClickListener { 
+            checkNextInput()
+        }
     }
 
     private fun checkInput(){
@@ -64,6 +68,11 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra(EXTRA_TEXT, results)
         startActivity(intent)
 
+    }
+    
+    private fun checkNextInput() {
+        var message = messageinput2.text.toString()
+        var key = messagekey.text.toString()
     }
 
 //    private fun ifAlpha(text: String) : Boolean{
