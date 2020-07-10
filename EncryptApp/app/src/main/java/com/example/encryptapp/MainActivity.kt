@@ -87,18 +87,13 @@ class MainActivity : AppCompatActivity() {
             }
         }
         message = message.replace("\\s".toRegex(),"")
-        
+
         results = vCipher(message, key)
         val intent = Intent(this, ThirdActivity :: class.java)
         intent.putExtra(EXTRA_TEXT, results)
     }
 
-//    private fun ifAlpha(text: String) : Boolean{
-//        if (Pattern.matches(".*[a-zA-z]+.*",text)){
-//            return true
-//        }
-//        return false
-//    }
+
 
     private fun cipher(text: String, shift: Int) : String{
         var temp  = ""
