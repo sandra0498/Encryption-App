@@ -14,5 +14,5 @@ asks for the user to input a message, as well as a key (phrase) to encrypt the m
 
 ***Still, in the process of working on edge cases (exceptions) of the app***
 
-**** This app will not allow the user to insert numbers or punctuation, only ALPHABET **
+*** This app will not allow the user to insert numbers or punctuation, only ALPHABET ***
 
