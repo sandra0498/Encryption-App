@@ -73,12 +73,12 @@ class MainActivity : AppCompatActivity() {
     private fun checkNextInput() {
         var message = messageinput2.text.toString()
         var key = messagekey.text.toString()
-        
-        //if either entries are empty, goes inside the conditional 
+
+        //if either entries are empty, goes inside the conditional
         if (message.isEmpty() || key.isEmpty()) {
-            
-            // differentiates the responses based on which entry is empty 
-            //not an else if due to a case of both being empty 
+
+            // differentiates the responses based on which entry is empty
+            //not an else if due to a case of both being empty
             if (message.isEmpty()) {
                 messageinput2.error = "Enter a message!"
             }
@@ -86,6 +86,11 @@ class MainActivity : AppCompatActivity() {
                 messagekey.error = "Enter a key!"
             }
         }
+        message = message.replace("\\s".toRegex(),"")
+        
+        results = vCipher(message, key)
+        val intent = Intent(this, ThirdActivity :: class.java)
+        intent.putExtra(EXTRA_TEXT, results)
     }
 
 //    private fun ifAlpha(text: String) : Boolean{
