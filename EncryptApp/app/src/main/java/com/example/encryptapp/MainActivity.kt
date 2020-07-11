@@ -127,14 +127,15 @@ class MainActivity : AppCompatActivity() {
         var newKey : CharArray = charArrayOf()
         var encryptmsg : CharArray = charArrayOf()
 
+        //NEED TO DEBUG HERE 
         // this loops generates a new key
         while (i < msglen){
-            ++i
-            ++j
             if (j == keylen){
                 j = 0
             }
             newKey[i] = key[j]
+            ++i
+            ++j
         }
         newKey[i] = '\u0000'
 
