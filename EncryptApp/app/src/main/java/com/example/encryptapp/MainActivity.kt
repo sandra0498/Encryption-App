@@ -144,7 +144,7 @@ class MainActivity : AppCompatActivity() {
         while (k < msglen){
             //getting the ASCII value
             var first : Int = firstarr[k].toInt()
-            var second : Int =  secondarr[k].toInt()
+            var second : Int =  newKey[k].toInt()
             var a_val : Int = 'A'.toInt()
 
             //getting the new value
