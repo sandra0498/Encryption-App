@@ -124,20 +124,19 @@ class MainActivity : AppCompatActivity() {
         val msglen = text.length
         val keylen = key.length
 
-        var newKey : CharArray = charArrayOf()
+        var newKey : MutableList<Char> = mutableListOf()
         var encryptmsg : CharArray = charArrayOf()
 
-        //NEED TO DEBUG HERE 
+
         // this loops generates a new key
         while (i < msglen){
+
             if (j == keylen){
                 j = 0
             }
-            newKey[i] = key[j]
-            ++i
-            ++j
+            newKey.add(secondarr[j])
+            i++ ;j++
         }
-        newKey[i] = '\u0000'
 
 
         //this loop encrypts the message
