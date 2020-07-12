@@ -134,7 +134,7 @@ class MainActivity : AppCompatActivity() {
             if (j == keylen){
                 j = 0
             }
-            newKey.add(secondarr[j])
+            newKey.add(i , secondarr[j])
             i++ ;j++
         }
 
