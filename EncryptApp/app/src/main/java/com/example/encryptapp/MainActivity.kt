@@ -88,11 +88,12 @@ class MainActivity : AppCompatActivity() {
         }
         message = message.replace("\\s".toRegex(),"")
 
-        var newKey: MutableList<Char> = generateKey(key, message)
+        var newKey: MutableList<Char> = generateKey(message , key)
 
         results = vCipher(newKey, message)
         val intent = Intent(this, ThirdActivity :: class.java)
         intent.putExtra(EXTRA_TEXT, results)
+        startActivity(intent)
     }
 
 
