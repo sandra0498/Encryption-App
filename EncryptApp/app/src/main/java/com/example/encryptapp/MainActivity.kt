@@ -113,6 +113,31 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    private fun generateKey(message: String, key: String) : MutableList<Char> {
+        var originalkey : CharArray = key.toCharArray()
+
+        var i = 0
+        var j = 0
+
+        val msglen = message.length
+        val keylen = key.length
+
+        //creating an empty char array
+        var newKey : MutableList<Char> = mutableListOf()
+
+        while (i < msglen){
+
+            if (j == keylen){
+                j = 0
+            }
+            newKey.add(i, originalkey[j])
+            i++ ;j++
+        }
+
+        return newKey
+
+    }
+
     // create a new function that performs the vigenere cipher
     private fun vCipher(text: String, key: String) : String{
 
