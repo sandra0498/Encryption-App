@@ -88,7 +88,9 @@ class MainActivity : AppCompatActivity() {
         }
         message = message.replace("\\s".toRegex(),"")
 
-        results = vCipher(message, key)
+        var newKey: MutableList<Char> = generateKey(key, message)
+
+        results = vCipher(newKey, message)
         val intent = Intent(this, ThirdActivity :: class.java)
         intent.putExtra(EXTRA_TEXT, results)
     }
@@ -113,6 +115,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    // this function generates a new key
     private fun generateKey(message: String, key: String) : MutableList<Char> {
         var originalkey : CharArray = key.toCharArray()
 
@@ -139,53 +142,33 @@ class MainActivity : AppCompatActivity() {
     }
 
     // create a new function that performs the vigenere cipher
-    private fun vCipher(text: String, key: String) : String{
+    private fun vCipher(Key : MutableList<Char>, message: String) : String{
 
-        var firstarr : CharArray =  text.toCharArray()
-        var secondarr : CharArray = key.toCharArray()
-        var i : Int = 0
-        var j : Int = 0
-
-        val msglen = text.length
-        val keylen = key.length
-
-        var newKey : MutableList<Char> = mutableListOf()
+        val msglen = message.length
+        var original : CharArray = message.toCharArray()
         var encryptmsg : MutableList<Char> = mutableListOf()
 
-
-        // this loops generates a new key
-        while (i < msglen){
-
-            if (j == keylen){
-                j = 0
-            }
-            newKey.add(i , secondarr[j])
-            i++ ;j++
-        }
-
-
-        //this loop encrypts the message
         var k = 0
-        while (k < msglen){
-            //getting the ASCII value
-            var first : Int = firstarr[k].toInt()
-            var second : Int =  newKey[k].toInt()
+
+        while(k < msglen){
+            var first : Int = original[k].toInt()
+            var second : Int = Key[k].toInt()
             var a_val : Int = 'A'.toInt()
 
-            //getting the new value
             var num : Int  = ((first + second ) % 26) + a_val
-
-            //converting the ASCII value to a char
             var newChar : Char = num.toChar()
             encryptmsg.add(newChar)
-            ++k
+            k++
         }
 
-        encryptmsg[k] = '\u0000'
+        var str: String = ""
 
+        for (i in encryptmsg){
+            str += i
 
+        }
 
-        return encryptmsg.toString()
+        return str
     }
 
 }
