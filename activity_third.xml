@@ -25,8 +25,8 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="345dp"
-        android:layout_height="54dp"
+        android:layout_width="290dp"
+        android:layout_height="27dp"
         android:textColor="#0C0807"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@id/textView"
