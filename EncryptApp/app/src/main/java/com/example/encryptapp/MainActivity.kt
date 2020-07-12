@@ -125,7 +125,7 @@ class MainActivity : AppCompatActivity() {
         val keylen = key.length
 
         var newKey : MutableList<Char> = mutableListOf()
-        var encryptmsg : CharArray = charArrayOf()
+        var encryptmsg : MutableList<Char> = mutableListOf()
 
 
         // this loops generates a new key
@@ -152,7 +152,7 @@ class MainActivity : AppCompatActivity() {
 
             //converting the ASCII value to a char
             var newChar : Char = num.toChar()
-            encryptmsg[k] = newChar
+            encryptmsg.add(newChar)
             ++k
         }
 
