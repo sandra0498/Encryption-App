@@ -26,7 +26,7 @@ class SecondActivity : AppCompatActivity() {
         val actionbar = supportActionBar
 
         //sets the title of the action bar
-        actionbar!!.title = "Result Window "
+        actionbar!!.title = "Result Window: Caesar cipher"
 
         //sets back button
         actionbar.setDisplayHomeAsUpEnabled(true)
