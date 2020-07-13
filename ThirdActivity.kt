@@ -18,7 +18,25 @@ class ThirdActivity : AppCompatActivity() {
 
         displayStr = findViewById(R.id.textView2)
         displayStr.setText(finalresult)
+
+
+        //sets an action bar
+        val actionbar = supportActionBar
+
+        //sets the title of the action bar
+        actionbar!!.title = "Result Window: Vigenère cipher"
+
+        //sets back button
+        actionbar.setDisplayHomeAsUpEnabled(true)
+        actionbar.setDisplayHomeAsUpEnabled(true)
+
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
 
 }
 
