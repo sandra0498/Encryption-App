@@ -3,7 +3,7 @@
 This application prompts the user to choose between a caesar cipher or Vigenère Cipher to encrypt a message. 
 
 ~~~
-Caesar Cipher: 
+Shift Cipher: 
 asks for the user to input a message and encrypts the message with a randomized key 
 ~~~~~~
 
